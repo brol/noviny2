@@ -1,0 +1,15 @@
+v0.3 - 16-03-2015 - Pierre Van Glabeke
+* ajout configurateur pour news
+* ajout aide intégrée
+* réorganisation des includes
+
+v0.2 - 16-03-2015 - Pierre Van Glabeke
+* ajout configurateur pour insert select et overview
+
+v0.1 - 14-03-2015 - Pierre Van Glabeke
+* fork de Noviny de Olivier Meunier
+* html
+* simplemenu requis
+* structure compatible plugins additionnels
+* volet custom en footer
+* jquery corrigé

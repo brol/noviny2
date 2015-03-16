@@ -1,0 +1,32 @@
+/*
+# ***** BEGIN LICENSE BLOCK *****
+#
+# Noviny2
+# Theme by Pierre Van Glabeke
+# Licensed under the GPL version 2.0 license.
+# See LICENSE file or
+# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+#
+# ***** END LICENSE BLOCK *****
+*/
+.news {
+	margin-bottom: 40px !important;
+	display:block;
+}
+.news h2 {
+	font-family: Helvetica,FreeSans,Arial,"Liberation Sans","Nimbus Sans L",sans-serif;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 0 0 2px 0;
+	border-bottom: 1px solid #e9dfc6;
+	color: #8c6f4a;
+}
+#sidebar div.news h3 {
+	font-size: 1.1em;
+	margin: 0;
+}
+#sidebar div.news p {
+	margin-bottom: 10px;
+	line-height: 1.2;
+}

@@ -1,0 +1,17 @@
+<div id="more-infos">
+  <p class="post-date"><span class="post-date">
+  <span class="date-d">{{tpl:EntryDate format="%e"}}</span>
+  <span class="date-m">{{tpl:EntryDate format="%b"}}</span>
+  <span class="date-y">{{tpl:EntryDate format="%Y"}}</span>
+  <span class="date-h"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Permalink}}">{{tpl:EntryDate format="%H:%M"}}</a></span>
+  </span></p>
+
+  <p class="post-author">{{tpl:lang By}} <strong>{{tpl:EntryAuthorLink}}</strong></p>
+  
+  <tpl:EntryIf operator="or" comments_active="1" pings_active="1">
+    <ul class="syndicate">
+      <li><a class="feed" href="{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}"
+      title="{{tpl:lang This page's comments feed}}">{{tpl:lang This page's comments feed}}</a></li>
+    </ul>
+  </tpl:EntryIf>
+</div>

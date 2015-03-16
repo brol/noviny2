@@ -1,0 +1,38 @@
+<div id="more-infos">
+  <p class="post-date"><span class="post-date">
+  <span class="date-d">{{tpl:EntryDate format="%e"}}</span>
+  <span class="date-m">{{tpl:EntryDate format="%b"}}</span>
+  <span class="date-y">{{tpl:EntryDate format="%Y"}}</span>
+  <span class="date-h"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Permalink}}">{{tpl:EntryDate format="%H:%M"}}</a></span>
+  </span></p>
+
+  <p class="post-author">{{tpl:lang By}} <strong>{{tpl:EntryAuthorLink}}</strong></p>
+
+  <tpl:EntryIf has_category="1">
+    <p class="post-category">
+    <tpl:EntryCategoriesBreadcrumb><a href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> &rsaquo; </tpl:EntryCategoriesBreadcrumb>
+      <a href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a>
+    </p>
+  </tpl:EntryIf>
+
+  <tpl:EntryTags>
+  <tpl:TagsHeader><ul class="post-tags" title="{{tpl:lang Tags}}"></tpl:TagsHeader>
+  <li><a href="{{tpl:TagURL}}" rel="tag">{{tpl:TagID}}</a><tpl:LoopPosition
+    start="1" length="-1">,</tpl:LoopPosition></li>
+  <tpl:TagsFooter></ul></tpl:TagsFooter>
+  </tpl:EntryTags>
+
+  <tpl:EntryIf operator="or" comments_active="1" pings_active="1">
+    <ul class="syndicate">
+      <li><a class="feed" href="{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}"
+      title="{{tpl:lang This post's comments Atom feed}}">{{tpl:lang This post's comments feed}}</a></li>
+    </ul>
+  </tpl:EntryIf>
+
+  <p id="navlinks">
+  <tpl:EntryPrevious><a href="{{tpl:EntryURL}}"
+  title="{{tpl:EntryTitle encode_html="1"}}" class="prev">&#171; {{tpl:lang Entry previous}}</a></tpl:EntryPrevious>
+  <tpl:EntryNext> <span>-</span> <a href="{{tpl:EntryURL}}"
+  title="{{tpl:EntryTitle encode_html="1"}}" class="next">{{tpl:lang Entry next}} &#187;</a></tpl:EntryNext>
+  </p>
+</div>

@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: noviny2 0.2\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-03-16T11:03:03+00:00\n"
+"Last-Translator: brol\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: _config.php:156
+msgid "Customizing the home page"
+msgstr "Personnalisation de la page d'accueil"
+
+#: _config.php:160
+msgid "Display Select"
+msgstr "Afficher Select"
+
+#: _config.php:165
+#: _config.php:178
+msgid "Code:"
+msgstr "Code :"
+
+#: _config.php:173
+msgid "Display Overview"
+msgstr "Afficher Overview"
+
+#: _config.php:186
+msgid "Display Breaking news"
+msgstr "Afficher Dernières nouvelles"

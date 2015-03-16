@@ -1,0 +1,72 @@
+/*
+# ***** BEGIN LICENSE BLOCK *****
+#
+# Noviny2
+# Theme by Pierre Van Glabeke
+# Licensed under the GPL version 2.0 license.
+# See LICENSE file or
+# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+#
+# ***** END LICENSE BLOCK *****
+*/
+#select {
+  display:block;
+	position: relative;
+	padding: 0 0 10px 0;
+	background: #3f6d90 url(../img/lead-bg.png) no-repeat bottom right;
+	color: #fff;
+	width: 700px;
+	float:left;
+	margin-bottom:10px;
+}
+#select div.block {
+	padding: 10px 20px 10px 240px;
+}
+#select img.front {
+	float: left;
+	display: block;
+	margin: 0;
+	width: 220px;
+}
+#select div.block a {
+	color: #dcbf9a;
+}
+#select p.category-title {
+	text-transform: uppercase;
+	font-size: 0.8em;
+	margin-bottom: 5px;
+	line-height: 1;
+}
+#select p.category-title a {
+	color: #7ebdf3;
+}
+#select div.block h2 {
+	font-size: 2.3em;
+	letter-spacing: 1px;
+}
+#select div.block h2 a {
+	color: #e9dfc6;
+}
+
+#select div.post-content {
+	margin: 2px 0;
+	clear:none !important;
+}
+#select div.post-content * {
+	margin: 0;
+}
+#select div.post-content p {
+  line-height: 1.4;
+  text-align: justify;
+}
+#select span.comment-count a {
+	background-position: 0 -140px;
+	color: #a2bed6;
+}
+#select span.comment-count a:hover, #select span.comment-count a:focus {
+	background-position: 0 -97px;
+	color: #7ebdf3;
+}
+* html #select span.comment-count a:hover, *html #select span.comment-count a:focus { /* IE6 */
+	background-position: 0 -140px;
+}
