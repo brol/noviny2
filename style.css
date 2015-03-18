@@ -152,38 +152,34 @@ p#blogdesc {
 	bottom: 10px;
 	width: 220px;
 }
+#search p {
+  background: none repeat scroll 0 0 #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 0 1px #636363 inset;
+  padding: 0;
+  width: 220px;
+}
 #search input.search-field {
-	margin: 0 0 0 10px;
-	padding: 3px 0 0;
-	width: 190px;
+	margin: 0;
+	padding: 2px 0 1px 10px;
+	width: 185px;
 	height: 17px;
 	border: none;
-	background: #fff url(img/search-bg.png) repeat-x top left;
+	background: transparent;
 	font-size: 12px;
 }
-#search span.search-l {
-	display: block;
-	position: absolute;
-	width: 10px;
-	height: 20px;
-	top: 0;
-	left: 0;
-	background: transparent url(img/search-l.png) no-repeat top left;
-}
-#search span.search-r {
-	display: block;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	top: 0;
-	right: 0;
-	background: transparent url(img/search-r.png) no-repeat top right;
-}
-* html #search span.search-l, * html #search span.search-r { /* IE6 */
-	top: 1px;
-}
-*+html #search span.search-l, *+html #search span.search-r { /* IE7 */
-	top: 1px;
+#search p .submit {
+	background: transparent url(img/search-icon.png) no-repeat center right;
+  border : none;
+  padding : 0;
+  margin-right:8px;
+  width : 15px;
+  float : right;
+  font-family : inherit;
+  cursor : pointer;
+  text-indent : -9999px;
 }
 
 #search-suggest {
@@ -963,7 +959,6 @@ input.preview:focus, input.submit:focus, input.preview:hover, input.submit:hover
 	background: #fff url(img/comment-add.png) no-repeat top left;
 	padding: 5px 0 10px 100px;
 	margin-top:10px;
-	cursor:pointer;
 }
 #comment-form h3 {
 	font: bold 1.4em Helvetica,FreeSans,Arial,"Liberation Sans","Nimbus Sans L",sans-serif;
@@ -984,7 +979,6 @@ input.preview:focus, input.submit:focus, input.preview:hover, input.submit:hover
 }
 #comment-form fieldset label {
 	font-weight: bold;
-	cursor: pointer;
 }
 #comment-form fieldset p {
 	margin: 0 0 1em;
@@ -1011,20 +1005,20 @@ input.preview:focus, input.submit:focus, input.preview:hover, input.submit:hover
 	font-family: inherit;
 }
 #c_name {
-	background-image: url(img/c-icons.png);
-	background-position: 3px 6px;
+	background-image: url(img/c-name.png);
+	background-position: 3px center;
 }
 #c_mail {
-	background-image: url(img/c-icons.png);
-	background-position: 3px -13px;
+	background-image: url(img/c-mail.png);
+	background-position: 3px center;
 }
 #c_site {
-	background-image: url(img/c-icons.png);
-	background-position: 3px -35px;
+	background-image: url(img/c-site.png);
+	background-position: 3px center;
 }
 #c_subject {
-	background-image: url(img/c-icons.png);
-	background-position: 3px -55px;
+	background-image: url(img/c-subject.png);
+	background-position: 3px center;
 }
 #c_content, #c_message {
 	width: 98%;
@@ -1036,6 +1030,8 @@ input.preview:focus, input.submit:focus, input.preview:hover, input.submit:hover
 #c_name:focus, #c_mail:focus, #c_site:focus, #c_content:focus {
 	color: #000;
 }
+#comment-form .jstElements button {cursor:pointer;}
+
 #navlinks {clear:both;text-align:center;margin-bottom: 10px;}
 /* catetory, search, etc */
 .dc-category #content-info h2,

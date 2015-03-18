@@ -11,9 +11,10 @@
   {{tpl:SysBehavior behavior="publicTopAfterContent"}}
 
   <form id="search" action="{{tpl:BlogURL}}" method="get"><div>
-  <span class="search-l"></span><input
+  <p><input
   type="text" id="q" name="q" class="search-field" maxlength="255" size="20"
-  value="{{tpl:SysSearchString encode_html="1"}}" title="{{tpl:lang Search}}" /><span class="search-r"></span>
+  value="{{tpl:SysSearchString encode_html="1"}}" title="{{tpl:lang Search}}" />
+  <input type="submit" value="ok" class="submit" /></p>
   </div></form>
 
   <div id="nav" role="navigation">{{tpl:SimpleMenu description="title"}}</div>
