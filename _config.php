@@ -34,7 +34,6 @@ $my_news = $core->blog->settings->themes->noviny2_news;
 
 # Select
 $html_fileselect = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-select.html';
-$html_contentselect = is_file($html_fileselect) ? file_get_contents($html_fileselect) : '';
 
 if (!is_file($html_fileselect) && !is_writable(dirname($html_fileselect))) {
 	throw new Exception(
@@ -45,7 +44,6 @@ if (!is_file($html_fileselect) && !is_writable(dirname($html_fileselect))) {
 
 # Overview
 $html_fileoverview = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-overview.html';
-$html_contentoverview = is_file($html_fileoverview) ? file_get_contents($html_fileoverview) : '';
 
 $overview = $core->blog->settings->themes->noviny2_overview;
 
@@ -58,7 +56,6 @@ if (!is_file($html_fileoverview) && !is_writable(dirname($html_fileoverview))) {
 
 # Overview
 $html_filenews = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-news.html';
-$html_contentnews = is_file($html_filenews) ? file_get_contents($html_filenews) : '';
 
 $news = $core->blog->settings->themes->noviny2_news;
 
@@ -148,6 +145,10 @@ if (!empty($_POST))
 		$core->error->add($e->getMessage());
 	}
 }
+
+$html_contentselect = is_file($html_fileselect) ? file_get_contents($html_fileselect) : '';
+$html_contentoverview = is_file($html_fileoverview) ? file_get_contents($html_fileoverview) : '';
+$html_contentnews = is_file($html_filenews) ? file_get_contents($html_filenews) : '';
 
 // DISPLAY
 
