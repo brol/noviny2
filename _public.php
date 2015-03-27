@@ -64,8 +64,8 @@ class tplnoviny2_news
 $core->addBehavior('publicHeadContent',array('behaviorsNoviny2','publicHeadContent'));
 
 # All tags go to archives
-$core->url->unregister('tags');
-$core->url->register('tags','tags','^tags$',array('dcUrlHandlers','archive'));
+//$core->url->unregister('tags');
+//$core->url->register('tags','tags','^tags$',array('dcUrlHandlers','archive'));
 
 # Ajax search URL
 $core->url->register('ajaxsearch','ajaxsearch','^ajaxsearch(?:(?:/)(.*))?$',array('urlsNoviny2','ajaxsearch'));
