@@ -1,0 +1,51 @@
+/*
+# ***** BEGIN LICENSE BLOCK *****
+#
+# Noviny2
+# Theme by Pierre Van Glabeke
+# Licensed under the GPL version 2.0 license.
+# See LICENSE file or
+# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+#
+# ***** END LICENSE BLOCK *****
+*/
+#nav {display:none;}
+/* simplemenu */
+#navsm {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 710px;
+	display:inline;
+}
+#navsm li {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: top;
+	word-wrap: break;
+	height: 100%;
+	margin: 0 20px 0 0;
+	padding: 0 0 10px 0;
+	font-size: 1.4em;
+	color: #463017;
+}
+* html #navsm li { /* IE6 */
+	display: inline;
+}
+*+html #navsm li { /* IE7 */
+	display: inline;
+}
+#navsm li a {
+	color: #e9dfc6;
+}
+#navsm li a:hover, #navsm li a:focus {
+	text-decoration: none;
+	color: #463017;
+}
+#navsm li.active {
+	background: transparent url(../img/nav-item.png) no-repeat bottom center;
+}
+#navsm li.active a {
+	color: #fff;
+}

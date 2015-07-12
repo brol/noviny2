@@ -23,14 +23,23 @@ global $core;
 l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
 
 # Default values
+$default_menu = 'simplemenu';
 $default_select = false;
 $default_overview = false;
 $default_news = false;
 
 # Settings
+$my_menu = $core->blog->settings->themes->noviny2_menu;
 $my_select = $core->blog->settings->themes->noviny2_select;
 $my_overview = $core->blog->settings->themes->noviny2_overview;
 $my_news = $core->blog->settings->themes->noviny2_news;
+
+# Menu type
+$noviny2_menu_combo = array(
+	__('SimpleMenu') => 'simplemenu',
+	__('Menu') => 'menu',
+	__('None') => 'nomenu'
+);
 
 # Select
 $html_fileselect = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-select.html';
@@ -73,6 +82,18 @@ if (!empty($_POST))
 	try
 	{
 		$core->blog->settings->addNamespace('themes');
+
+		# Menu type
+		if (!empty($_POST['noviny2_menu']) && in_array($_POST['noviny2_menu'],$noviny2_menu_combo))
+		{
+			$my_menu = $_POST['noviny2_menu'];
+
+		} elseif (empty($_POST['noviny2_menu']))
+		{
+			$my_menu = $default_menu;
+
+		}
+		$core->blog->settings->themes->put('noviny2_menu',$my_menu,'string','Menu to display',true);
 
 		# select
 		if (!empty($_POST['noviny2_select']))
@@ -151,6 +172,14 @@ $html_contentoverview = is_file($html_fileoverview) ? file_get_contents($html_fi
 $html_contentnews = is_file($html_filenews) ? file_get_contents($html_filenews) : '';
 
 // DISPLAY
+
+# Menu type
+echo
+'<div class="fieldset"><h4>'.__('Menu').'</h4>'.
+'<p class="field"><label>'.__('Menu to display:').'</label>'.
+form::combo('noviny2_menu',$noviny2_menu_combo,$my_menu).
+'</p>'.
+'</div>';
 
 # Select
 echo

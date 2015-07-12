@@ -12,6 +12,20 @@ if (!defined('DC_RC_PATH')) { return; }
 
 l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/public');
 
+# appel css menu
+$core->addBehavior('publicHeadContent','noviny2menu_publicHeadContent');
+
+function noviny2menu_publicHeadContent($core)
+{
+	$style = $core->blog->settings->themes->noviny2_menu;
+	if (!preg_match('/^simplemenu|menu|nomenu$/',$style)) {
+		$style = 'simplemenu';
+	}
+
+	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
+	echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/".$style.".css\" />\n";
+}
+
 # appel css select
 if ($core->blog->settings->themes->noviny2_select)
 {

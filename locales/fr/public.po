@@ -1,9 +1,14 @@
+# Language: Français
+# Module: noviny2 - 0.8
+# Date: 2015-07-12 16:50:56
+# Translated with translater 2015.03.02
+
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
-"Project-Id-Version: noviny2 0.2\n"
+"Project-Id-Version: noviny2 0.8\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-03-16T11:03:03+00:00\n"
+"PO-Revision-Date: 2015-07-12T16:50:56+00:00\n"
 "Last-Translator: brol\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -41,3 +46,4 @@ msgstr "Fil des billets de cet auteur"
 
 msgid "This author's comments feed"
 msgstr "Fil des commentaires de cet auteur"
+

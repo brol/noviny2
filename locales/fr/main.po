@@ -1,31 +1,42 @@
+# Language: Français
+# Module: noviny2 - 0.8
+# Date: 2015-07-12 16:50:56
+# Translated with translater 2015.03.02
+
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
-"Project-Id-Version: noviny2 0.2\n"
+"Project-Id-Version: noviny2 0.8\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-03-16T11:03:03+00:00\n"
+"PO-Revision-Date: 2015-07-12T16:50:56+00:00\n"
 "Last-Translator: brol\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: _config.php:156
+#: _config.php:179
+msgid "Menu to display:"
+msgstr "Menu à afficher :"
+
+#: _config.php:186
 msgid "Customizing the home page"
 msgstr "Personnalisation de la page d'accueil"
 
-#: _config.php:160
+#: _config.php:190
 msgid "Display Select"
 msgstr "Afficher Select"
 
-#: _config.php:165
-#: _config.php:178
+#: _config.php:195
+#: _config.php:208
+#: _config.php:221
 msgid "Code:"
 msgstr "Code :"
 
-#: _config.php:173
+#: _config.php:203
 msgid "Display Overview"
 msgstr "Afficher Overview"
 
-#: _config.php:186
+#: _config.php:216
 msgid "Display Breaking news"
 msgstr "Afficher Dernières nouvelles"
+

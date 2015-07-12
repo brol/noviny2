@@ -213,45 +213,6 @@ p#blogdesc {
 	background: #e9dfc6;
 }
 
-/* simplemenu */
-#nav {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 710px;
-}
-#nav li {
-	display: -moz-inline-box;
-	-moz-box-orient: vertical;
-	display: inline-block;
-	vertical-align: top;
-	word-wrap: break;
-	height: 100%;
-	margin: 0 20px 0 0;
-	padding: 0 0 10px 0;
-	font-size: 1.4em;
-	color: #463017;
-}
-* html #nav li { /* IE6 */
-	display: inline;
-}
-*+html #nav li { /* IE7 */
-	display: inline;
-}
-#nav li a {
-	color: #e9dfc6;
-}
-#nav li a:hover, #nav li a:focus {
-	text-decoration: none;
-	color: #463017;
-}
-#nav li.active {
-	background: transparent url(img/nav-item.png) no-repeat bottom center;
-}
-#nav li.active a {
-	color: #fff;
-}
-
 /* page */
 #wrapper {
 	margin: 20px auto 20px;
