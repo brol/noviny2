@@ -54,7 +54,7 @@
 	vertical-align: top;
 	word-wrap: break;
 	height: 100%;
-	margin: 0 20px 0 0;
+	margin: 0 15px 0 0;
 	padding: 0 0 10px 0;
 	font-size: 1.4em;
 	color: #463017;
@@ -155,3 +155,15 @@
 	height:2em;
 	line-height:2em;
 }
+.caret {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px dashed;
+  display: inline-block;
+  height: 0;
+  margin-left: 4px;
+  vertical-align: middle;
+  width: 0;
+}
+
+#nav ul ul li .caret, #sidebar .w-block-menu .caret {display:none;}

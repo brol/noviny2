@@ -12,7 +12,7 @@
 /* Reset
 -------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -29,6 +29,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
   line-height: 1;
 }
+
 ol, ul {
   list-style: none;
 }
@@ -138,11 +139,12 @@ a img {
 }
 
 p#blogdesc {
-	width: 700px;
+	/*width: 700px;*/
 	font-size: 1.3em;
 	font-family: Baskerville,"Times New Roman",serif;
 	font-style: oblique;
 	color: #463017;
+	margin: 0;
 }
 /* search */
 #search {
@@ -159,6 +161,7 @@ p#blogdesc {
   border-radius: 10px;
   box-shadow: 1px 1px 0 1px #636363 inset;
   padding: 0;
+  margin: 0;
   width: 220px;
 }
 #search input.search-field {
@@ -227,6 +230,7 @@ p#blogdesc {
   width: 700px;
   color: #222;
 }
+#breadcrumb {padding:0 0 0.5em 0;margin: 0;}
 #content {}
 
 #content h2, h2.post-title, #subcategories h3 {
@@ -291,6 +295,7 @@ p#blogdesc {
 
 #blogcustom div.tags p {
 	font-weight: bold;
+	margin: 0;
 }
 #blogcustom div.tags ul {
 	border-top: none;
@@ -343,6 +348,7 @@ p#blogdesc {
 	color: #fff;
 	background: #998F76;
 }
+#footer p {margin: 0;}
 #footer a {
 	color: #463017;
 }
@@ -357,7 +363,7 @@ div.post {
   margin: 0 0 20px;
 }
 div.post p.post-info {
-  margin-top: 3px;
+  margin: 3px 0 0;
 }
 div.post span.post-date {
   font-style: oblique;
@@ -567,8 +573,7 @@ ul.tags li {
 
 #more-infos p.post-author {
 	font-size: 1em;
-	margin-bottom: 10px;
-	margin-top: 15px;
+	margin: 15px 0 10px;
 }
 body.dc-post, #more-infos ul.syndicate {
 	clear: both;
@@ -577,7 +582,7 @@ body.dc-post, #more-infos ul.syndicate {
 #more-infos p.post-category {
 	clear: right;
 	padding: 0 0 5px 20px;
-	margin-bottom: 5px;
+	margin: 0 0 5px 0;
 	background: #fff url(img/category.png) no-repeat 0 0;
 	line-height: 1.4;
 }
@@ -993,7 +998,7 @@ input.preview:focus, input.submit:focus, input.preview:hover, input.submit:hover
 }
 #comment-form .jstElements button {cursor:pointer;}
 
-#navlinks {clear:both;text-align:center;margin-bottom: 10px;}
+#navlinks {clear:both;text-align:center;margin: 0 0 10px;}
 /* catetory, search, etc */
 .dc-category #content-info h2,
 #content-info {
@@ -1029,6 +1034,7 @@ input.preview:focus, input.submit:focus, input.preview:hover, input.submit:hover
 .dc-archive-month .post-content p {
   line-height:1.4;
   text-align:justify;
+  margin: 0;
 }
 .dc-category .read-it,
 .dc-search .read-it,
@@ -1079,4 +1085,5 @@ input.preview:focus, input.submit:focus, input.preview:hover, input.submit:hover
 #content .category div p {
   line-height:1.4;
   text-align:justify;
+  margin: 0;
 }
