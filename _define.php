@@ -14,9 +14,10 @@ $this->registerModule(
 	/* Name */			   "Noviny2",
 	/* Description*/	 "Fork de Noviny",
 	/* Author */		   "Pierre Van Glabeke",
-	/* Version */		   "0.9",
+	/* Version */		   "1.0",
 	array(
 		'type'	 =>	'theme',
-		'tplset' => 'mustek'
+		'tplset' => 'mustek',
+		'dc_min' => '2.9'
 	)
 );

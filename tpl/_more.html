@@ -1,6 +1,9 @@
 <!-- # Add here anything you like to display on your "meta" part in page (Adds or any static stuff...) -->
 <!-- # On home page -->
 <tpl:SysIf current_tpl="home.html">
+  <tpl:Entries lastn="1">
+    <div class="last-update">{{tpl:lang Last update:}} <strong>{{tpl:EntryDate}}</strong></div>
+  </tpl:Entries>
   {{tpl:include src="inc-news.html"}}
 </tpl:SysIf>
 
