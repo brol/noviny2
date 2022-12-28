@@ -11,16 +11,14 @@
 if (!defined('DC_CONTEXT_ADMIN')) { return; }
 
 // Load contextual help
-if (file_exists(dirname(__FILE__).'/locales/'.$_lang.'/resources.php')) {
-	require dirname(__FILE__).'/locales/'.$_lang.'/resources.php';
+if (file_exists(dirname(__FILE__) . '/locales/' . dcCore::app()->lang . '/resources.php')) {
+    require dirname(__FILE__) . '/locales/' . dcCore::app()->lang . '/resources.php';
 }
-
-global $core;
 
 //PARAMS
 
 # Translations
-l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
+l10n::set(__DIR__ . '/locales/' . dcCore::app()->lang . '/main');
 
 # Default values
 $default_menu = 'simplemenu';
@@ -29,10 +27,10 @@ $default_overview = false;
 $default_news = false;
 
 # Settings
-$my_menu = $core->blog->settings->themes->noviny2_menu;
-$my_select = $core->blog->settings->themes->noviny2_select;
-$my_overview = $core->blog->settings->themes->noviny2_overview;
-$my_news = $core->blog->settings->themes->noviny2_news;
+$my_menu = dcCore::app()->blog->settings->themes->noviny2_menu;
+$my_select = dcCore::app()->blog->settings->themes->noviny2_select;
+$my_overview = dcCore::app()->blog->settings->themes->noviny2_overview;
+$my_news = dcCore::app()->blog->settings->themes->noviny2_news;
 
 # Menu type
 $noviny2_menu_combo = array(
@@ -42,7 +40,7 @@ $noviny2_menu_combo = array(
 );
 
 # Select
-$html_fileselect = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-select.html';
+$html_fileselect = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-select.html';
 
 if (!is_file($html_fileselect) && !is_writable(dirname($html_fileselect))) {
 	throw new Exception(
@@ -52,9 +50,9 @@ if (!is_file($html_fileselect) && !is_writable(dirname($html_fileselect))) {
 }
 
 # Overview
-$html_fileoverview = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-overview.html';
+$html_fileoverview = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-overview.html';
 
-$overview = $core->blog->settings->themes->noviny2_overview;
+$overview = dcCore::app()->blog->settings->themes->noviny2_overview;
 
 if (!is_file($html_fileoverview) && !is_writable(dirname($html_fileoverview))) {
 	throw new Exception(
@@ -64,9 +62,9 @@ if (!is_file($html_fileoverview) && !is_writable(dirname($html_fileoverview))) {
 }
 
 # Overview
-$html_filenews = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-news.html';
+$html_filenews = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-news.html';
 
-$news = $core->blog->settings->themes->noviny2_news;
+$news = dcCore::app()->blog->settings->themes->noviny2_news;
 
 if (!is_file($html_filenews) && !is_writable(dirname($html_filenews))) {
 	throw new Exception(
@@ -81,7 +79,7 @@ if (!empty($_POST))
 {
 	try
 	{
-		$core->blog->settings->addNamespace('themes');
+		dcCore::app()->blog->settings->addNamespace('themes');
 
 		# Menu type
 		if (!empty($_POST['noviny2_menu']) && in_array($_POST['noviny2_menu'],$noviny2_menu_combo))
@@ -93,7 +91,7 @@ if (!empty($_POST))
 			$my_menu = $default_menu;
 
 		}
-		$core->blog->settings->themes->put('noviny2_menu',$my_menu,'string','Menu to display',true);
+		dcCore::app()->blog->settings->themes->put('noviny2_menu',$my_menu,'string','Menu to display',true);
 
 		# select
 		if (!empty($_POST['noviny2_select']))
@@ -106,7 +104,7 @@ if (!empty($_POST))
 			$my_select = $default_select;
 
 		}
-		$core->blog->settings->themes->put('noviny2_select',$my_select,'boolean', 'Display Select',true);
+		dcCore::app()->blog->settings->themes->put('noviny2_select',$my_select,'boolean', 'Display Select',true);
 
 		if (isset($_POST['select']))
 		{
@@ -125,7 +123,7 @@ if (!empty($_POST))
 			$my_overview = $default_overview;
 
 		}
-		$core->blog->settings->themes->put('noviny2_overview',$my_overview,'boolean', 'Display Overview',true);
+		dcCore::app()->blog->settings->themes->put('noviny2_overview',$my_overview,'boolean', 'Display Overview',true);
 
 		if (isset($_POST['overview']))
 		{
@@ -144,7 +142,7 @@ if (!empty($_POST))
 			$my_news = $default_news;
 
 		}
-		$core->blog->settings->themes->put('noviny2_news',$my_news,'boolean', 'Display News',true);
+		dcCore::app()->blog->settings->themes->put('noviny2_news',$my_news,'boolean', 'Display News',true);
 
 		if (isset($_POST['news']))
 		{
@@ -154,16 +152,16 @@ if (!empty($_POST))
 		}
 
 		// Blog refresh
-		$core->blog->triggerBlog();
+		dcCore::app()->blog->triggerBlog();
 
 		// Template cache reset
-		$core->emptyTemplatesCache();
+		dcCore::app()->emptyTemplatesCache();
 
 		dcPage::success(__('Theme configuration has been successfully updated.'),true,true);
 	}
 	catch (Exception $e)
 	{
-		$core->error->add($e->getMessage());
+		dcCore::app()->error->add($e->getMessage());
 	}
 }
 

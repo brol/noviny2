@@ -11,13 +11,13 @@
 if (!defined('DC_RC_PATH')) { return; }
 
 $this->registerModule(
-	/* Name */			   "Noviny2",
-	/* Description*/	 "Fork de Noviny",
-	/* Author */		   "Pierre Van Glabeke",
-	/* Version */		   "1.1",
-	array(
-		'type'	 =>	'theme',
-		'tplset' => 'mustek',
-		'dc_min' => '2.15'
-	)
+    'Noviny2',
+    'Fork de Noviny',
+    'Pierre Van Glabeke',
+    '1.2',
+    [
+        'requires' => [['core', '2.24']],
+        'type'     => 'theme',
+        'tplset'   => 'mustek',
+    ]
 );

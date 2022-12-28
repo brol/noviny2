@@ -8,6 +8,6 @@
 # http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 #
 # ***** END LICENSE BLOCK *****
-if (!isset($__resources['help']['noviny2'])) {
-	$__resources['help']['noviny2'] = dirname(__FILE__).'/help/noviny2.html';
+if (!isset(dcCore::app()->resources['help']['noviny2'])) {
+	dcCore::app()->resources['help']['noviny2'] = dirname(__FILE__).'/help/noviny2.html';
 }
