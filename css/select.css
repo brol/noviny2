@@ -67,6 +67,3 @@
 	background-position: 0 -97px;
 	color: #7ebdf3;
 }
-* html #select span.comment-count a:hover, *html #select span.comment-count a:focus { /* IE6 */
-	background-position: 0 -140px;
-}

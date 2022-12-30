@@ -21,15 +21,9 @@
 	-moz-box-orient: vertical;
 	display: inline-block;
 	vertical-align: top;
-	word-wrap: break;
+	/*word-wrap: break;*/
 	height: 100%;
 	margin: 0 16px 20px 0;
-}
-* html #overview div.block { /* IE6 */
-	display: inline;
-}
-*+html #overview div.block { /* IE7 */
-	display: inline;
 }
 
 #overview div.block img.front {

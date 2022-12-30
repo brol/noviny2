@@ -41,7 +41,6 @@ $noviny2_menu_combo = array(
 
 # Select
 $html_fileselect = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-select.html';
-
 if (!is_file($html_fileselect) && !is_writable(dirname($html_fileselect))) {
 	throw new Exception(
 		sprintf(__('File %s does not exist and directory %s is not writable.'),
@@ -82,70 +81,50 @@ if (!empty($_POST))
 		dcCore::app()->blog->settings->addNamespace('themes');
 
 		# Menu type
-		if (!empty($_POST['noviny2_menu']) && in_array($_POST['noviny2_menu'],$noviny2_menu_combo))
-		{
+		if (!empty($_POST['noviny2_menu']) && in_array($_POST['noviny2_menu'],$noviny2_menu_combo))	{
 			$my_menu = $_POST['noviny2_menu'];
-
-		} elseif (empty($_POST['noviny2_menu']))
-		{
+		} elseif (empty($_POST['noviny2_menu'])) {
 			$my_menu = $default_menu;
-
 		}
 		dcCore::app()->blog->settings->themes->put('noviny2_menu',$my_menu,'string','Menu to display',true);
 
 		# select
-		if (!empty($_POST['noviny2_select']))
-		{
+		if (!empty($_POST['noviny2_select'])) {
 			$my_select = $_POST['noviny2_select'];
-
-
-		} elseif (empty($_POST['noviny2_select']))
-		{
+		} elseif (empty($_POST['noviny2_select'])) {
 			$my_select = $default_select;
-
 		}
 		dcCore::app()->blog->settings->themes->put('noviny2_select',$my_select,'boolean', 'Display Select',true);
 
-		if (isset($_POST['select']))
-		{
+		if (isset($_POST['select'])) {
 			@$fp = fopen($html_fileselect,'wb');
 			fwrite($fp,$_POST['select']);
 			fclose($fp);
 		}
 
 		# Overview
-		if (!empty($_POST['noviny2_overview']))
-		{
+		if (!empty($_POST['noviny2_overview']))	{
 			$my_overview = $_POST['noviny2_overview'];
-
-		} elseif (empty($_POST['noviny2_overview']))
-		{
+		} elseif (empty($_POST['noviny2_overview'])) {
 			$my_overview = $default_overview;
-
 		}
 		dcCore::app()->blog->settings->themes->put('noviny2_overview',$my_overview,'boolean', 'Display Overview',true);
 
-		if (isset($_POST['overview']))
-		{
+		if (isset($_POST['overview'])) {
 			@$fp = fopen($html_fileoverview,'wb');
 			fwrite($fp,$_POST['overview']);
 			fclose($fp);
 		}
 
 		# News
-		if (!empty($_POST['noviny2_news']))
-		{
+		if (!empty($_POST['noviny2_news']))	{
 			$my_news = $_POST['noviny2_news'];
-
-		} elseif (empty($_POST['noviny2_news']))
-		{
+		} elseif (empty($_POST['noviny2_news'])) {
 			$my_news = $default_news;
-
 		}
 		dcCore::app()->blog->settings->themes->put('noviny2_news',$my_news,'boolean', 'Display News',true);
 
-		if (isset($_POST['news']))
-		{
+		if (isset($_POST['news'])) {
 			@$fp = fopen($html_filenews,'wb');
 			fwrite($fp,$_POST['news']);
 			fclose($fp);
@@ -158,9 +137,7 @@ if (!empty($_POST))
 		dcCore::app()->emptyTemplatesCache();
 
 		dcPage::success(__('Theme configuration has been successfully updated.'),true,true);
-	}
-	catch (Exception $e)
-	{
+	} catch (Exception $e) {
 		dcCore::app()->error->add($e->getMessage());
 	}
 }

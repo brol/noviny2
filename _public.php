@@ -30,7 +30,7 @@ function noviny2menu_publicHeadContent()
 if (dcCore::app()->blog->settings->themes->noviny2_select)
 {
 	dcCore::app()->addBehavior('publicHeadContent',
-		array('tplnoviny2_select','publicHeadContent'));
+		['tplnoviny2_select','publicHeadContent']);
 }
 
 class tplnoviny2_select
@@ -46,7 +46,7 @@ class tplnoviny2_select
 if (dcCore::app()->blog->settings->themes->noviny2_overview)
 {
 	dcCore::app()->addBehavior('publicHeadContent',
-		array('tplnoviny2_overview','publicHeadContent'));
+		['tplnoviny2_overview','publicHeadContent']);
 }
 
 class tplnoviny2_overview
@@ -62,7 +62,7 @@ class tplnoviny2_overview
 if (dcCore::app()->blog->settings->themes->noviny2_news)
 {
 	dcCore::app()->addBehavior('publicHeadContent',
-		array('tplnoviny2_news','publicHeadContent'));
+		['tplnoviny2_news','publicHeadContent']);
 }
 
 class tplnoviny2_news
@@ -75,7 +75,7 @@ class tplnoviny2_news
 }
 
 # We add some scripts in all pages
-dcCore::app()->addBehavior('publicHeadContent',array('behaviorsNoviny2','publicHeadContent'));
+dcCore::app()->addBehavior('publicHeadContent',['behaviorsNoviny2','publicHeadContent']);
 
 # All tags go to archives
 //dcCore::app()->url->unregister('tags');
@@ -89,7 +89,7 @@ class behaviorsNoviny2
 	public static function publicHeadContent()
 	{
 		echo
-		'<script type="text/javascript">'."\n".
+		'<script>'."\n".
 		"//<![CDATA[\n".
 		'var noviny2 = { '.
 		"ajaxsearch: '".html::escapeJS(dcCore::app()->blog->url.dcCore::app()->url->getBase('ajaxsearch'))."/' ".
