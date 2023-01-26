@@ -104,7 +104,6 @@ class urlsNoviny2
 {
 	public static function ajaxsearch($args)
 	{
-		dcCore::app();
 		$res = '';
 
 		try
