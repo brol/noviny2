@@ -1,6 +1,6 @@
-v1.2 - 07/01/2023 - Pierre Van Glabeke
+v1.2 - 10/03/2023 - Pierre Van Glabeke
 * màj html, css, localisation
-* dc2.24 requis
+* dc2.26 requis
 
 v1.1 - 27/11/2019 - Pierre Van Glabeke
 * modifs html

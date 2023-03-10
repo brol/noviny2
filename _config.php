@@ -1,13 +1,13 @@
 <?php
-# ***** BEGIN LICENSE BLOCK *****
-#
-# Noviny2
-# Theme by Pierre Van Glabeke
-# Licensed under the GPL version 2.0 license.
-# See LICENSE file or
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# ***** END LICENSE BLOCK *****
+/**
+ * @brief Noviny2, a theme for Dotclear 2
+ *
+ * @package Dotclear
+ * @subpackage Theme
+ *
+ * @author Pierre Van Glabeke
+ * @copyright https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 if (!defined('DC_CONTEXT_ADMIN')) { return; }
 
 // Load contextual help
@@ -60,7 +60,7 @@ if (!is_file($html_fileoverview) && !is_writable(dirname($html_fileoverview))) {
 	);
 }
 
-# Overview
+# News
 $html_filenews = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-news.html';
 
 $news = dcCore::app()->blog->settings->themes->noviny2_news;
